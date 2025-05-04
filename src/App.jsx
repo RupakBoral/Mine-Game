@@ -51,7 +51,7 @@ function App() {
   };
 
   return (
-    <div className="h-screen space-y-6 flex flex-col items-center">
+    <div className="h-screen relative space-y-6 flex flex-col items-center">
       <main className="flex flex-col gap-4 transition-all duration-300 ease-in-out">
         <h2>Mine Game</h2>
         <div
@@ -113,7 +113,12 @@ function App() {
             className="bg-white/50 p-2 text-black font-semibold rounded-sm"
           />
         </div>
-        <button onClick={handleBet}>Place Bet</button>
+        <button
+          onClick={handleBet}
+          className="p-0 border-0 bg-gradient-to-r from-orange-600 to-blue-700"
+        >
+          Place Bet
+        </button>
         {returnValue > 0 ? (
           <p>Yay! you earned: {Math.floor(returnValue)}</p>
         ) : returnValue < 0 ? (
@@ -124,6 +129,15 @@ function App() {
           ""
         )}
       </section>
+      <footer className="mt-6 border-t p-4">
+        <p className="font-semibold text-xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
+          Developed by: Rupak Boral
+        </p>
+
+        <a href="https://rupakboral-portfolio.web.app" target="blank">
+          My Portfolio
+        </a>
+      </footer>
     </div>
   );
 }
