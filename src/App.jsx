@@ -38,7 +38,6 @@ function App() {
     setReveal((prev) => (prev.includes(cellId) ? prev : [...prev, cellId]));
     // calculate the amount -> 5x
     setAmount(amount * 1.2);
-    console.log(amount);
     // if all gems collected then reward
     if (reveal.length === 15) {
       setReturnValue(amount);
